@@ -22,9 +22,6 @@ class HttpCodes {
         }
 
         Optional<HttpStatusCode> httpStatusCode = scraperController.getHttpStatusCode(statusCode);
-
-        if (httpStatusCode.isPresent()) {
-            System.out.println(httpStatusCode);
-        }
+        httpStatusCode.ifPresent(System.out::println);
     }
 }
