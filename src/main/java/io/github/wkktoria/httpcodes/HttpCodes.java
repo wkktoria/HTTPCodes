@@ -96,11 +96,7 @@ class HttpCodes {
                     descriptionTextArea.setForeground(Color.BLACK);
                     descriptionTextArea.setText(httpStatusCode.get().description());
                 } else {
-                    codeLabel.setForeground(Color.RED);
-                    codeLabel.setText("Status code: Error");
-
-                    descriptionTextArea.setForeground(Color.RED);
-                    descriptionTextArea.setText("Could not find information about provided HTTP response status code.");
+                    JOptionPane.showMessageDialog(frame, "Status code is invalid or there was a problem during information fetching.", "Invalid status code", JOptionPane.ERROR_MESSAGE);
                 }
 
                 codeTextField.setText("");
