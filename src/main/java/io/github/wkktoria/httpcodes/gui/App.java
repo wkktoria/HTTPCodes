@@ -31,6 +31,7 @@ public class App extends JFrame {
         JTextArea statusDescriptionTextArea = new JTextArea(initialStatusCode.description());
         statusDescriptionTextArea.setEditable(false);
         statusDescriptionTextArea.setLineWrap(true);
+        statusDescriptionTextArea.setMargin(new Insets(10,10,10,10));
 
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new BorderLayout());
