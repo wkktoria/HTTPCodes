@@ -37,7 +37,7 @@ public class App extends JFrame {
         inputPanel.setLayout(new BorderLayout());
 
         JTextField statusCodeTextField = new JTextField();
-        statusCodeTextField.setColumns(28);
+        statusCodeTextField.setColumns(30);
 
         JButton searchButton = new JButton("Search");
 
