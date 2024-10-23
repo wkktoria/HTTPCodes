@@ -16,9 +16,6 @@ public class App extends JFrame {
     public App() {
         super("HTTP Codes");
 
-    }
-
-    public void run() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(new Dimension(480, 480));
@@ -26,9 +23,11 @@ public class App extends JFrame {
         setLayout(new BorderLayout());
 
         JLabel statusCodeLabel = new JLabel("Status code: " + initialStatusCode.code());
+        statusCodeLabel.setName("statusCodeLabel");
         statusCodeLabel.setHorizontalAlignment(JLabel.CENTER);
 
         JTextArea statusDescriptionTextArea = new JTextArea(initialStatusCode.description());
+        statusDescriptionTextArea.setName("statusDescriptionTextArea");
         statusDescriptionTextArea.setEditable(false);
         statusDescriptionTextArea.setLineWrap(true);
         statusDescriptionTextArea.setMargin(new Insets(10,10,10,10));
@@ -37,9 +36,11 @@ public class App extends JFrame {
         inputPanel.setLayout(new BorderLayout());
 
         JTextField statusCodeTextField = new JTextField();
+        statusCodeTextField.setName("statusCodeTextField");
         statusCodeTextField.setColumns(30);
 
         JButton searchButton = new JButton("Search");
+        searchButton.setName("searchButton");
 
         statusCodeTextField.addKeyListener(new KeyListener() {
             @Override
@@ -90,6 +91,5 @@ public class App extends JFrame {
         add(inputPanel, BorderLayout.SOUTH);
 
         setVisible(true);
-
     }
 }

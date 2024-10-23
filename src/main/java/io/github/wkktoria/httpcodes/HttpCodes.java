@@ -13,7 +13,6 @@ class HttpCodes {
             return;
         }
 
-        App app = new App();
-        app.run();
+        new App();
     }
 }
